@@ -1,4 +1,6 @@
 #+title: Machimania
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css">
+#+OPTIONS: num:4 toc:4
 
 * Broader game-design
 Explores the broader game design and values the creators would like to explore.
@@ -198,7 +200,7 @@ Think of there being an actual "Machimania" universe - what parts of the Machima
 **** Broader loop
 Menu -> game instance -> location -> battle -> location -> battle ...
 **** Battle loop
-**
+player X turn -> select actions -> execute actions -> player X+1 turn -> ... -> win/lose condition
 *** TODO User interface and controls
 *** TODO Global systems
 
@@ -236,4 +238,7 @@ Refers to the mechanics present when you interact with things or NPCs in the map
 **** Win/lose condition
 ** TODO Strategy and Progression
 By strategy I mean the high level techniques or rules-of-thumb or trade-offs that allows the player to play more efficiently in response to certain enemies or maps. If choices in gameplay or dialogue affect the narrative, it also may involve strategizing about narrative choices
-** TODO
+* Current work
+What's been planned and implemented and where is it?
+** TODO Prototype
+** TODO Notes
