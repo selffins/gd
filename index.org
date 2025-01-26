@@ -14,6 +14,8 @@ How complex do we want the narrative to be?
 What are the project milestones and their progression?
 *** Ideation
 How do we ideate? Chat, deliberate agendas, mood boards, inspirations from other games...? How do you visualize plot?
+**** Concept testing
+**** Feedback loop
 *** Prototyping Goals
 What should the prototype look like?
 *** Ideal outcome
@@ -26,6 +28,7 @@ How is information about the game design / development structure stored?
 *** Tools and platforms
 What do we use for developing the game?
 ** TODO Design principles
+
 What are the principles that guide the design?
 *** Agency
 How much control does the player have over the game? What actions cause deliberate changes? What actions cost anything?
@@ -56,7 +59,9 @@ character flaws, irony, motif, stock characters, character arcs, deuteragonists,
 What tropes do we want to use or subvert?
 
 How is the writing done (i.e. what does the player read)? Do we use description, exposition, narration, ...
-** Influences
+** TODO Audience
+Who's going to play the game? What audience do you imagine is playing this game? What choices do we need to do to accommodate the audience?
+** TODO Influences
 What are some similar games? What do some games do well, and that we want to incorporate? How about bad games?
 What features from other games "would be fun to create myself"?
 
@@ -76,7 +81,7 @@ Differences in vision, lack of consensus regarding features, lack of communicati
 *** Unclear commitments, priorities and expectation
 Is this an actual project and what are the commitments and expectations?
 * Narrative
-** Narrative
+** TODO Narrative
 This section describes the world as from someone's perspective in-universe (as opposed to in-game).
 In this section, we focus on world-building and forget (for now) the trappings of the game.
 This allows us to separate world-building and world-realization.
@@ -187,19 +192,19 @@ What locations are there in the world? Not all necessarily exist as in-game loca
 This section describes how the narrative elements are realized using gameplay and style.
 Think of there being an actual "Machimania" universe - what parts of the Machimania universe exists in-game instead of in-universe? For example, the Machimania planet has a *lot* of places, but we can only choose to realize or represent certain locations.
 
-*** Plot Progression
-*** Locations
-*** Map Design
-*** Gameplay
-**** Modularity
-*** Art and Music
+*** TODO Plot Progression
+*** TODO Locations
+*** TODO Map Design
+*** TODO Gameplay
+**** TODO Modularity
+*** TODO Art and Music
 
 * Gameplay
-** Features
+** TODO Features
 *** TODO Gameplay loops
-**** Broader loop
+**** TODO Broader loop
 Menu -> game instance -> location -> battle -> location -> battle ...
-**** Battle loop
+**** TODO Battle loop
 player X turn -> select actions -> execute actions -> player X+1 turn -> ... -> win/lose condition
 *** TODO User interface and controls
 *** TODO Global systems
@@ -208,36 +213,37 @@ Refers to the persistent, over-arching mechanics of the game.
 
 They give a sense of continuity or progression (i.e. stats or bestiary or personal wiki increasing over time) (quests), help with information overload (bestiary, stats, wiki, quests), add some beyond battle strategizing (time, stats in battle, stats affecting movement in map, stats affecting dialogue trees) and interacts with narrative (quests determining where to go, wiki)...
 
-**** Player-centric
-***** Quests
-***** Player Stats
-***** Bestiary
-***** Personal Wiki
-***** Inventory
-**** World State / Map
-***** Time
+**** TODO Player-centric
+***** TODO Quests
+***** TODO Player Stats
+***** TODO Bestiary
+***** TODO Personal Wiki
+***** TODO Inventory
+**** TODO World State / Map
+***** TODO Time
 
 *** TODO In-map interactions
 
 Refers to the mechanics present when you interact with things or NPCs in the map.
 
 
-**** NPC interactions
+**** TODO NPC interactions
 ***** Dialogue trees
 ***** Dialogue display
-**** Terrain
-**** Obstacles
-**** Interactables
-**** Scenery
+**** TODO Terrain
+**** TODO Obstacles
+**** TODO Interactables
+**** TODO Scenery
 *** TODO Battle system
-**** Turn economy
-**** Terrain
-**** Team composition
-**** Entities
-**** Actions in a turn
-**** Win/lose condition
+**** TODO Turn economy
+**** TODO Terrain
+**** TODO Team composition
+**** TODO Entities
+**** TODO Actions in a turn
+**** TODO Win/lose condition
 ** TODO Strategy and Progression
-By strategy I mean the high level techniques or rules-of-thumb or trade-offs that allows the player to play more efficiently in response to certain enemies or maps. If choices in gameplay or dialogue affect the narrative, it also may involve strategizing about narrative choices
+By strategy I mean the high level techniques or rules-of-thumb or trade-offs that allows the player to play more efficiently in response to certain enemies or maps. If choices in gameplay or dialogue affect the narrative, it also may involve strategizing about narrative choices.
+
 * Current work
 What's been planned and implemented and where is it?
 ** TODO Prototype
