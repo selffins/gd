@@ -1,0 +1,239 @@
+#+title: Machimania
+
+* Broader game-design
+Explores the broader game design and values the creators would like to explore.
+** Game summary
+Machimania is an adventure game that explores a post-apocalyptic futuristic world, with a creative turn-based strategy battle system.
+*** Core mechanic
+Battle system
+** TODO Narrative
+How complex do we want the narrative to be?
+** TODO Development priorities
+What are the project milestones and their progression?
+*** Ideation
+How do we ideate? Chat, deliberate agendas, mood boards, inspirations from other games...? How do you visualize plot?
+*** Prototyping Goals
+What should the prototype look like?
+*** Ideal outcome
+What is the vision of the final game? What's the "marketing story"?
+** TODO Development
+*** Communication
+How are discussions held? How are discussions structured?
+*** Notes
+How is information about the game design / development structure stored?
+*** Tools and platforms
+What do we use for developing the game?
+** TODO Design principles
+What are the principles that guide the design?
+*** Agency
+How much control does the player have over the game? What actions cause deliberate changes? What actions cost anything?
+*** Pacing
+What's the expected game time? How fast does the narrative unfold? How
+*** Quality of life, game feedback, rewards
+Includes prompts, hints, notes, cues, that are provided to the player in order for them to have a better gameplay experience with QOL.
+
+
+*** Core mission
+How does the player "win"? What is the player's goal?
+*** Strategy and challenge
+What broader strategies do we want the player to execute or learn as they progress through the game?
+What challenges exist? What solutions exist to complete the "core mission"?
+*** Gameplay balance
+Related to "Strategy and challenge". How difficult do we want the game to be?
+
+*** Mood and atmosphere
+What "vibe" do we want with the game? Is it supposed to be immersive? What's the atmosphere - dark? Or is it more detached, like management games?
+How do we give  information do we give (see: Pacing) - is it like Minecraft's mystery that arises from no dialogue with NPCs?
+Are the themes in-your-face, or are they subtle?
+
+*** Narrative structures or goals
+Are there some particular narrative sturcture we want to explore - e.g. monomyth, three-act/Aristotelian structure.
+Do we use in medias res? W
+What plot devices do we want to use - e.g. deus ex machina, plot vouchers (objects given to a player that then play a specific role later), red herrings, flashbacks, unreliable narrator, non-linear narratives, ...
+character flaws, irony, motif, stock characters, character arcs, deuteragonists, narration, verisimilitude (belivability/degree suspension of disbelief), genre...
+What tropes do we want to use or subvert?
+
+How is the writing done (i.e. what does the player read)? Do we use description, exposition, narration, ...
+** Influences
+What are some similar games? What do some games do well, and that we want to incorporate? How about bad games?
+What features from other games "would be fun to create myself"?
+
+** Things we don't want
+*** Feature creep
+We don't want to be too ambitious. We can explore a lot of features, or world-building, but not all will be part of the final game.
+Heuristics like "keep it simple" can help with the pruning.
+
+https://en.wikipedia.org/wiki/Feature_creep
+*** Scope creep
+https://en.wikipedia.org/wiki/Scope_creep
+*** Too much focus on details
+*** Too much focus on big idea
+A lot of planning without concrete work doesn't lead to anything substantial (unless the expectation is just a fun exploration of game design and ideation).
+*** Lack of agreement
+Differences in vision, lack of consensus regarding features, lack of communication, lack of definitions or agreed definitions, lack of purpose in discussion.
+*** Unclear commitments, priorities and expectation
+Is this an actual project and what are the commitments and expectations?
+* Narrative
+** Narrative
+This section describes the world as from someone's perspective in-universe (as opposed to in-game).
+In this section, we focus on world-building and forget (for now) the trappings of the game.
+This allows us to separate world-building and world-realization.
+*** TODO Themes
+
+Refers to the overarching ideas to be explored in the game's narrative elements. If you had a "message", or "perspective" or "argument " as an author - what would that be?
+Themes guide the writing and design and gameplay.
+**** Core Themes
+e.g.
+- humans relationship with technology,
+- governance
+- diy/tech culture
+-futuristic society, unsustainable growth, factions, making fun of current technology trends
+**** Smaller themes
+- llms
+- product/software fails
+
+*** TODO Setting
+What time period or locations exist in the world? What are the assumptions (i.e. "magic exists") of this world, as in, what differences-from-IRL-world exist here?"
+
+**** Time
+Post apocalyptic world, year 23XX.
+
+**** Main Location
+Where does our main character live and primarily work in?
+
+*** TODO History
+
+Why is the world the way it is? If it's based in real life, what are the points of divergence? How did things go differently in history - i.e. perhaps New World cultures were not massively wiped out.
+If it's not based in real life, what was the world generally like, and what are the events that lead to now?
+
+The MC's history can be explored here too.
+
+**** Pre-apocalypse
+What was the world like before things "started becoming wrong"?
+**** Just before the apocalypse
+What were the leading events to the apocalypse?
+
+**** The apocalypse
+What happened during the apocalypse?
+
+
+**** Just after the apocalypse
+What are the apocalypse's immediate effects? What became the "new normal"?
+
+**** Very recent history and present state
+What are the present state of affairs? What are some recent events that are relevant to the present state of affairs?
+
+**** Things to happen
+Suppose you are at a particular month X, year Y. What (major) events are known to happen  the point of month X, year Y -- for example, the annual Machimania competition.
+
+*** TODO Society (of main setting)
+
+Informed by theme, works within setting, history.
+How is the social landscape? What values are important? How does normal life go?
+Why is it the way it is? Why are these systems in place? What subcultures are there?
+
+**** Neo-SF Government
+
+Faux-democratic actually-oligarchic techno-kleptocracy.
+
+**** Machimania sport and League
+**** Education
+**** Economy
+**** Culture and Values
+**** Social strata or groups
+**** Law and Order
+**** Attitude towards other places
+Explored more in "relationships". How does the society think of themselves and what do they think of other societies?
+Is there some sort of sense of "superiority" or "things we do better" w.r.t to other cultures? What are commonalities?
+
+**** Attitude towards problems
+What solution would the current culture pursue to certain problems?
+
+*** TODO Main Character
+Who is our main character, what is their past, what is their personality, their goals, and relationships to other characters and the world?
+What are some points of growth for our main character to be explored through the main plot (and themes?
+**** Who
+**** Past
+**** Goals
+*** TODO Main Plot
+What is the main plot progression? If it's non-linear, what are points of divergence? Can it be graphed?
+Remember, this is "in-universe" and not necessarily "in-game".
+Consider a universe - let's call it America. An author writes about America.
+How does the plot progress?
+
+**** Intro
+**** Rising action
+**** Climax
+**** Falling action
+**** Ending(s)
+*** TODO Subplots
+If there's a main plot that explores the themes and "answers" the question posed (e.g. "how will society progress in a technological post-apocalyptic world", "what will our relationship to technology be and will it be good or bad"), there are subplots that are tangents to the main plot. These can be explored by quests or interactions.
+
+They can influence the main plot but not too much -- if it's a particular /section/ of the actual main plot, it belongs in the main plot progression.
+
+*** TODO Other Characters
+Who are the other characters and what role do they play?
+
+*** TODO Places
+What locations are there in the world? Not all necessarily exist as in-game locations, they can be alluded to in plot.
+
+*** TODO Relationships
+**** of Places to Places
+**** of Characters to Characters
+
+* Realization of Narrative
+This section describes how the narrative elements are realized using gameplay and style.
+Think of there being an actual "Machimania" universe - what parts of the Machimania universe exists in-game instead of in-universe? For example, the Machimania planet has a *lot* of places, but we can only choose to realize or represent certain locations.
+
+*** Plot Progression
+*** Locations
+*** Map Design
+*** Gameplay
+**** Modularity
+*** Art and Music
+
+* Gameplay
+** Features
+*** TODO Gameplay loops
+**** Broader loop
+Menu -> game instance -> location -> battle -> location -> battle ...
+**** Battle loop
+**
+*** TODO User interface and controls
+*** TODO Global systems
+
+Refers to the persistent, over-arching mechanics of the game.
+
+They give a sense of continuity or progression (i.e. stats or bestiary or personal wiki increasing over time) (quests), help with information overload (bestiary, stats, wiki, quests), add some beyond battle strategizing (time, stats in battle, stats affecting movement in map, stats affecting dialogue trees) and interacts with narrative (quests determining where to go, wiki)...
+
+**** Player-centric
+***** Quests
+***** Player Stats
+***** Bestiary
+***** Personal Wiki
+***** Inventory
+**** World State / Map
+***** Time
+
+*** TODO In-map interactions
+
+Refers to the mechanics present when you interact with things or NPCs in the map.
+
+
+**** NPC interactions
+***** Dialogue trees
+***** Dialogue display
+**** Terrain
+**** Obstacles
+**** Interactables
+**** Scenery
+*** TODO Battle system
+**** Turn economy
+**** Terrain
+**** Team composition
+**** Entities
+**** Actions in a turn
+**** Win/lose condition
+** TODO Strategy and Progression
+By strategy I mean the high level techniques or rules-of-thumb or trade-offs that allows the player to play more efficiently in response to certain enemies or maps. If choices in gameplay or dialogue affect the narrative, it also may involve strategizing about narrative choices
+** TODO

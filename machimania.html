@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-01-26 Sun 14:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Machimania</title>
+<meta name="author" content="selffins" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Machimania</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3eb21f7">1. Broader game-design</a>
+<ul>
+<li><a href="#orgc6cce3e">1.1. Game summary</a>
+<ul>
+<li><a href="#org655a9e9">1.1.1. Core mechanic</a></li>
+</ul>
+</li>
+<li><a href="#org6e44bfa">1.2. <span class="todo TODO">TODO</span> Narrative</a></li>
+<li><a href="#orgb9fc66b">1.3. <span class="todo TODO">TODO</span> Development priorities</a>
+<ul>
+<li><a href="#org50a34fd">1.3.1. Ideation</a></li>
+<li><a href="#orgb984858">1.3.2. Prototyping Goals</a></li>
+<li><a href="#org5d85c4b">1.3.3. Ideal outcome</a></li>
+</ul>
+</li>
+<li><a href="#org587fd70">1.4. <span class="todo TODO">TODO</span> Development</a>
+<ul>
+<li><a href="#org2dabd61">1.4.1. Communication</a></li>
+<li><a href="#orgd836a4e">1.4.2. Notes</a></li>
+<li><a href="#org263e275">1.4.3. Tools and platforms</a></li>
+</ul>
+</li>
+<li><a href="#org4b580ab">1.5. <span class="todo TODO">TODO</span> Design principles</a>
+<ul>
+<li><a href="#orgf0f78d5">1.5.1. Agency</a></li>
+<li><a href="#orgfa39023">1.5.2. Pacing</a></li>
+<li><a href="#org8bd2a17">1.5.3. Quality of life, game feedback, rewards</a></li>
+<li><a href="#orgdb9e787">1.5.4. Core mission</a></li>
+<li><a href="#org6ea5525">1.5.5. Strategy and challenge</a></li>
+<li><a href="#orge93b49d">1.5.6. Gameplay balance</a></li>
+<li><a href="#org007c90c">1.5.7. Mood and atmosphere</a></li>
+<li><a href="#org03c4087">1.5.8. Narrative structures or goals</a></li>
+</ul>
+</li>
+<li><a href="#orgaeac52f">1.6. Influences</a></li>
+<li><a href="#org0ffe7d5">1.7. Things we don&rsquo;t want</a>
+<ul>
+<li><a href="#org4507635">1.7.1. Feature creep</a></li>
+<li><a href="#org33848f3">1.7.2. Scope creep</a></li>
+<li><a href="#org26418b1">1.7.3. Too much focus on details</a></li>
+<li><a href="#org986305d">1.7.4. Too much focus on big idea</a></li>
+<li><a href="#org75fba3f">1.7.5. Lack of agreement</a></li>
+<li><a href="#org47f6c1d">1.7.6. Unclear commitments, priorities and expectation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6fea4aa">2. Narrative</a>
+<ul>
+<li><a href="#org7f75f6b">2.1. Narrative</a>
+<ul>
+<li><a href="#orgcf03f0c">2.1.1. <span class="todo TODO">TODO</span> Themes</a></li>
+<li><a href="#org97fd878">2.1.2. <span class="todo TODO">TODO</span> Setting</a></li>
+<li><a href="#org1cd7ebb">2.1.3. <span class="todo TODO">TODO</span> History</a></li>
+<li><a href="#orgad1465c">2.1.4. <span class="todo TODO">TODO</span> Society (of main setting)</a></li>
+<li><a href="#orgdad18c8">2.1.5. <span class="todo TODO">TODO</span> Main Character</a></li>
+<li><a href="#orgee15056">2.1.6. <span class="todo TODO">TODO</span> Main Plot</a></li>
+<li><a href="#org609a87c">2.1.7. <span class="todo TODO">TODO</span> Subplots</a></li>
+<li><a href="#org3ba0654">2.1.8. <span class="todo TODO">TODO</span> Other Characters</a></li>
+<li><a href="#orgecded59">2.1.9. <span class="todo TODO">TODO</span> Places</a></li>
+<li><a href="#org1cb14fb">2.1.10. <span class="todo TODO">TODO</span> Relationships</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd221890">3. Realization of Narrative</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org691571a">3.0.1. Plot Progression</a></li>
+<li><a href="#org36253fc">3.0.2. Locations</a></li>
+<li><a href="#org36c4be6">3.0.3. Map Design</a></li>
+<li><a href="#org484f1f1">3.0.4. Gameplay</a></li>
+<li><a href="#orgef71c44">3.0.5. Art and Music</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org025fb65">4. Gameplay</a>
+<ul>
+<li><a href="#orgadf727f">4.1. Features</a>
+<ul>
+<li><a href="#org9cd6081">4.1.1. <span class="todo TODO">TODO</span> Gameplay loops</a></li>
+<li><a href="#org007a212">4.1.2. <span class="todo TODO">TODO</span> User interface and controls</a></li>
+<li><a href="#orge3e8847">4.1.3. <span class="todo TODO">TODO</span> Global systems</a></li>
+<li><a href="#org666b1df">4.1.4. <span class="todo TODO">TODO</span> In-map interactions</a></li>
+<li><a href="#org6327a8b">4.1.5. <span class="todo TODO">TODO</span> Battle system</a></li>
+</ul>
+</li>
+<li><a href="#org75e6c28">4.2. <span class="todo TODO">TODO</span> Strategy and Progression</a></li>
+<li><a href="#orgde12a72">4.3. <span class="todo TODO">TODO</span> </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3eb21f7" class="outline-2">
+<h2 id="org3eb21f7"><span class="section-number-2">1.</span> Broader game-design</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Explores the broader game design and values the creators would like to explore.
+</p>
+</div>
+<div id="outline-container-orgc6cce3e" class="outline-3">
+<h3 id="orgc6cce3e"><span class="section-number-3">1.1.</span> Game summary</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Machimania is an adventure game that explores a post-apocalyptic futuristic world, with a creative turn-based strategy battle system.
+</p>
+</div>
+<div id="outline-container-org655a9e9" class="outline-4">
+<h4 id="org655a9e9"><span class="section-number-4">1.1.1.</span> Core mechanic</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Battle system
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e44bfa" class="outline-3">
+<h3 id="org6e44bfa"><span class="section-number-3">1.2.</span> <span class="todo TODO">TODO</span> Narrative</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+How complex do we want the narrative to be?
+</p>
+</div>
+</div>
+<div id="outline-container-orgb9fc66b" class="outline-3">
+<h3 id="orgb9fc66b"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> Development priorities</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+What are the project milestones and their progression?
+</p>
+</div>
+<div id="outline-container-org50a34fd" class="outline-4">
+<h4 id="org50a34fd"><span class="section-number-4">1.3.1.</span> Ideation</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+How do we ideate? Chat, deliberate agendas, mood boards, inspirations from other games&#x2026;? How do you visualize plot?
+</p>
+</div>
+</div>
+<div id="outline-container-orgb984858" class="outline-4">
+<h4 id="orgb984858"><span class="section-number-4">1.3.2.</span> Prototyping Goals</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+What should the prototype look like?
+</p>
+</div>
+</div>
+<div id="outline-container-org5d85c4b" class="outline-4">
+<h4 id="org5d85c4b"><span class="section-number-4">1.3.3.</span> Ideal outcome</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+What is the vision of the final game? What&rsquo;s the &ldquo;marketing story&rdquo;?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org587fd70" class="outline-3">
+<h3 id="org587fd70"><span class="section-number-3">1.4.</span> <span class="todo TODO">TODO</span> Development</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org2dabd61" class="outline-4">
+<h4 id="org2dabd61"><span class="section-number-4">1.4.1.</span> Communication</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+How are discussions held? How are discussions structured?
+</p>
+</div>
+</div>
+<div id="outline-container-orgd836a4e" class="outline-4">
+<h4 id="orgd836a4e"><span class="section-number-4">1.4.2.</span> Notes</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+How is information about the game design / development structure stored?
+</p>
+</div>
+</div>
+<div id="outline-container-org263e275" class="outline-4">
+<h4 id="org263e275"><span class="section-number-4">1.4.3.</span> Tools and platforms</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+What do we use for developing the game?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4b580ab" class="outline-3">
+<h3 id="org4b580ab"><span class="section-number-3">1.5.</span> <span class="todo TODO">TODO</span> Design principles</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+What are the principles that guide the design?
+</p>
+</div>
+<div id="outline-container-orgf0f78d5" class="outline-4">
+<h4 id="orgf0f78d5"><span class="section-number-4">1.5.1.</span> Agency</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+How much control does the player have over the game? What actions cause deliberate changes? What actions cost anything?
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa39023" class="outline-4">
+<h4 id="orgfa39023"><span class="section-number-4">1.5.2.</span> Pacing</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+What&rsquo;s the expected game time? How fast does the narrative unfold? How
+</p>
+</div>
+</div>
+<div id="outline-container-org8bd2a17" class="outline-4">
+<h4 id="org8bd2a17"><span class="section-number-4">1.5.3.</span> Quality of life, game feedback, rewards</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<p>
+Includes prompts, hints, notes, cues, that are provided to the player in order for them to have a better gameplay experience with QOL.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdb9e787" class="outline-4">
+<h4 id="orgdb9e787"><span class="section-number-4">1.5.4.</span> Core mission</h4>
+<div class="outline-text-4" id="text-1-5-4">
+<p>
+How does the player &ldquo;win&rdquo;? What is the player&rsquo;s goal?
+</p>
+</div>
+</div>
+<div id="outline-container-org6ea5525" class="outline-4">
+<h4 id="org6ea5525"><span class="section-number-4">1.5.5.</span> Strategy and challenge</h4>
+<div class="outline-text-4" id="text-1-5-5">
+<p>
+What broader strategies do we want the player to execute or learn as they progress through the game?
+What challenges exist? What solutions exist to complete the &ldquo;core mission&rdquo;?
+</p>
+</div>
+</div>
+<div id="outline-container-orge93b49d" class="outline-4">
+<h4 id="orge93b49d"><span class="section-number-4">1.5.6.</span> Gameplay balance</h4>
+<div class="outline-text-4" id="text-1-5-6">
+<p>
+Related to &ldquo;Strategy and challenge&rdquo;. How difficult do we want the game to be?
+</p>
+</div>
+</div>
+<div id="outline-container-org007c90c" class="outline-4">
+<h4 id="org007c90c"><span class="section-number-4">1.5.7.</span> Mood and atmosphere</h4>
+<div class="outline-text-4" id="text-1-5-7">
+<p>
+What &ldquo;vibe&rdquo; do we want with the game? Is it supposed to be immersive? What&rsquo;s the atmosphere - dark? Or is it more detached, like management games?
+How do we give  information do we give (see: Pacing) - is it like Minecraft&rsquo;s mystery that arises from no dialogue with NPCs?
+Are the themes in-your-face, or are they subtle?
+</p>
+</div>
+</div>
+<div id="outline-container-org03c4087" class="outline-4">
+<h4 id="org03c4087"><span class="section-number-4">1.5.8.</span> Narrative structures or goals</h4>
+<div class="outline-text-4" id="text-1-5-8">
+<p>
+Are there some particular narrative sturcture we want to explore - e.g. monomyth, three-act/Aristotelian structure.
+Do we use in medias res? W
+What plot devices do we want to use - e.g. deus ex machina, plot vouchers (objects given to a player that then play a specific role later), red herrings, flashbacks, unreliable narrator, non-linear narratives, &#x2026;
+character flaws, irony, motif, stock characters, character arcs, deuteragonists, narration, verisimilitude (belivability/degree suspension of disbelief), genre&#x2026;
+What tropes do we want to use or subvert?
+</p>
+
+<p>
+How is the writing done (i.e. what does the player read)? Do we use description, exposition, narration, &#x2026;
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaeac52f" class="outline-3">
+<h3 id="orgaeac52f"><span class="section-number-3">1.6.</span> Influences</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+What are some similar games? What do some games do well, and that we want to incorporate? How about bad games?
+What features from other games &ldquo;would be fun to create myself&rdquo;?
+</p>
+</div>
+</div>
+<div id="outline-container-org0ffe7d5" class="outline-3">
+<h3 id="org0ffe7d5"><span class="section-number-3">1.7.</span> Things we don&rsquo;t want</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org4507635" class="outline-4">
+<h4 id="org4507635"><span class="section-number-4">1.7.1.</span> Feature creep</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+We don&rsquo;t want to be too ambitious. We can explore a lot of features, or world-building, but not all will be part of the final game.
+Heuristics like &ldquo;keep it simple&rdquo; can help with the pruning.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Feature_creep">https://en.wikipedia.org/wiki/Feature_creep</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org33848f3" class="outline-4">
+<h4 id="org33848f3"><span class="section-number-4">1.7.2.</span> Scope creep</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+<a href="https://en.wikipedia.org/wiki/Scope_creep">https://en.wikipedia.org/wiki/Scope_creep</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org26418b1" class="outline-4">
+<h4 id="org26418b1"><span class="section-number-4">1.7.3.</span> Too much focus on details</h4>
+</div>
+<div id="outline-container-org986305d" class="outline-4">
+<h4 id="org986305d"><span class="section-number-4">1.7.4.</span> Too much focus on big idea</h4>
+<div class="outline-text-4" id="text-1-7-4">
+<p>
+A lot of planning without concrete work doesn&rsquo;t lead to anything substantial (unless the expectation is just a fun exploration of game design and ideation).
+</p>
+</div>
+</div>
+<div id="outline-container-org75fba3f" class="outline-4">
+<h4 id="org75fba3f"><span class="section-number-4">1.7.5.</span> Lack of agreement</h4>
+<div class="outline-text-4" id="text-1-7-5">
+<p>
+Differences in vision, lack of consensus regarding features, lack of communication, lack of definitions or agreed definitions, lack of purpose in discussion.
+</p>
+</div>
+</div>
+<div id="outline-container-org47f6c1d" class="outline-4">
+<h4 id="org47f6c1d"><span class="section-number-4">1.7.6.</span> Unclear commitments, priorities and expectation</h4>
+<div class="outline-text-4" id="text-1-7-6">
+<p>
+Is this an actual project and what are the commitments and expectations?
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6fea4aa" class="outline-2">
+<h2 id="org6fea4aa"><span class="section-number-2">2.</span> Narrative</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7f75f6b" class="outline-3">
+<h3 id="org7f75f6b"><span class="section-number-3">2.1.</span> Narrative</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+This section describes the world as from someone&rsquo;s perspective in-universe (as opposed to in-game).
+In this section, we focus on world-building and forget (for now) the trappings of the game.
+This allows us to separate world-building and world-realization.
+</p>
+</div>
+<div id="outline-container-orgcf03f0c" class="outline-4">
+<h4 id="orgcf03f0c"><span class="section-number-4">2.1.1.</span> <span class="todo TODO">TODO</span> Themes</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Refers to the overarching ideas to be explored in the game&rsquo;s narrative elements. If you had a &ldquo;message&rdquo;, or &ldquo;perspective&rdquo; or &ldquo;argument &rdquo; as an author - what would that be?
+Themes guide the writing and design and gameplay.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org3a1069b"></a>Core Themes<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<p>
+e.g.
+</p>
+<ul class="org-ul">
+<li>humans relationship with technology,</li>
+<li>governance</li>
+<li>diy/tech culture</li>
+</ul>
+<p>
+-futuristic society, unsustainable growth, factions, making fun of current technology trends
+</p>
+</div>
+</li>
+<li><a id="orgfb5ec98"></a>Smaller themes<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li>llms</li>
+<li>product/software fails</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org97fd878" class="outline-4">
+<h4 id="org97fd878"><span class="section-number-4">2.1.2.</span> <span class="todo TODO">TODO</span> Setting</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+What time period or locations exist in the world? What are the assumptions (i.e. &ldquo;magic exists&rdquo;) of this world, as in, what differences-from-IRL-world exist here?"
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org3db8407"></a>Time<br />
+<div class="outline-text-5" id="text-2-1-2-1">
+<p>
+Post apocalyptic world, year 23XX.
+</p>
+</div>
+</li>
+<li><a id="org14e16ce"></a>Main Location<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<p>
+Where does our main character live and primarily work in?
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org1cd7ebb" class="outline-4">
+<h4 id="org1cd7ebb"><span class="section-number-4">2.1.3.</span> <span class="todo TODO">TODO</span> History</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+Why is the world the way it is? If it&rsquo;s based in real life, what are the points of divergence? How did things go differently in history - i.e. perhaps New World cultures were not massively wiped out.
+If it&rsquo;s not based in real life, what was the world generally like, and what are the events that lead to now?
+</p>
+
+<p>
+The MC&rsquo;s history can be explored here too.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org185d982"></a>Pre-apocalypse<br />
+<div class="outline-text-5" id="text-2-1-3-1">
+<p>
+What was the world like before things &ldquo;started becoming wrong&rdquo;?
+</p>
+</div>
+</li>
+<li><a id="org960935d"></a>Just before the apocalypse<br />
+<div class="outline-text-5" id="text-2-1-3-2">
+<p>
+What were the leading events to the apocalypse?
+</p>
+</div>
+</li>
+<li><a id="org630ba06"></a>The apocalypse<br />
+<div class="outline-text-5" id="text-2-1-3-3">
+<p>
+What happened during the apocalypse?
+</p>
+</div>
+</li>
+<li><a id="org26b8225"></a>Just after the apocalypse<br />
+<div class="outline-text-5" id="text-2-1-3-4">
+<p>
+What are the apocalypse&rsquo;s immediate effects? What became the &ldquo;new normal&rdquo;?
+</p>
+</div>
+</li>
+<li><a id="orgc35d3ca"></a>Very recent history and present state<br />
+<div class="outline-text-5" id="text-2-1-3-5">
+<p>
+What are the present state of affairs? What are some recent events that are relevant to the present state of affairs?
+</p>
+</div>
+</li>
+<li><a id="org2627612"></a>Things to happen<br />
+<div class="outline-text-5" id="text-2-1-3-6">
+<p>
+Suppose you are at a particular month X, year Y. What (major) events are known to happen  the point of month X, year Y &#x2013; for example, the annual Machimania competition.
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgad1465c" class="outline-4">
+<h4 id="orgad1465c"><span class="section-number-4">2.1.4.</span> <span class="todo TODO">TODO</span> Society (of main setting)</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+Informed by theme, works within setting, history.
+How is the social landscape? What values are important? How does normal life go?
+Why is it the way it is? Why are these systems in place? What subcultures are there?
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org32c25ed"></a>Neo-SF Government<br />
+<div class="outline-text-5" id="text-2-1-4-1">
+<p>
+Faux-democratic actually-oligarchic techno-kleptocracy.
+</p>
+</div>
+</li>
+<li><a id="orgdaa67a0"></a>Machimania sport and League<br /></li>
+<li><a id="orgf04faee"></a>Education<br /></li>
+<li><a id="org4dfb2d9"></a>Economy<br /></li>
+<li><a id="orgada9585"></a>Culture and Values<br /></li>
+<li><a id="orgc3355ab"></a>Social strata or groups<br /></li>
+<li><a id="org78bc8e8"></a>Law and Order<br /></li>
+<li><a id="org967f8b1"></a>Attitude towards other places<br />
+<div class="outline-text-5" id="text-2-1-4-8">
+<p>
+Explored more in &ldquo;relationships&rdquo;. How does the society think of themselves and what do they think of other societies?
+Is there some sort of sense of &ldquo;superiority&rdquo; or &ldquo;things we do better&rdquo; w.r.t to other cultures? What are commonalities?
+</p>
+</div>
+</li>
+<li><a id="orgacda37f"></a>Attitude towards problems<br />
+<div class="outline-text-5" id="text-2-1-4-9">
+<p>
+What solution would the current culture pursue to certain problems?
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgdad18c8" class="outline-4">
+<h4 id="orgdad18c8"><span class="section-number-4">2.1.5.</span> <span class="todo TODO">TODO</span> Main Character</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<p>
+Who is our main character, what is their past, what is their personality, their goals, and relationships to other characters and the world?
+What are some points of growth for our main character to be explored through the main plot (and themes?
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org762e44b"></a>Who<br /></li>
+<li><a id="orgb07450f"></a>Past<br /></li>
+<li><a id="org40ebd81"></a>Goals<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgee15056" class="outline-4">
+<h4 id="orgee15056"><span class="section-number-4">2.1.6.</span> <span class="todo TODO">TODO</span> Main Plot</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<p>
+What is the main plot progression? If it&rsquo;s non-linear, what are points of divergence? Can it be graphed?
+Remember, this is &ldquo;in-universe&rdquo; and not necessarily &ldquo;in-game&rdquo;.
+Consider a universe - let&rsquo;s call it America. An author writes about America.
+How does the plot progress?
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org393e6fa"></a>Intro<br /></li>
+<li><a id="org461de8a"></a>Rising action<br /></li>
+<li><a id="org22d4806"></a>Climax<br /></li>
+<li><a id="org0b602f0"></a>Falling action<br /></li>
+<li><a id="org995f757"></a>Ending(s)<br /></li>
+</ol>
+</div>
+<div id="outline-container-org609a87c" class="outline-4">
+<h4 id="org609a87c"><span class="section-number-4">2.1.7.</span> <span class="todo TODO">TODO</span> Subplots</h4>
+<div class="outline-text-4" id="text-2-1-7">
+<p>
+If there&rsquo;s a main plot that explores the themes and &ldquo;answers&rdquo; the question posed (e.g. &ldquo;how will society progress in a technological post-apocalyptic world&rdquo;, &ldquo;what will our relationship to technology be and will it be good or bad&rdquo;), there are subplots that are tangents to the main plot. These can be explored by quests or interactions.
+</p>
+
+<p>
+They can influence the main plot but not too much &#x2013; if it&rsquo;s a particular <i>section</i> of the actual main plot, it belongs in the main plot progression.
+</p>
+</div>
+</div>
+<div id="outline-container-org3ba0654" class="outline-4">
+<h4 id="org3ba0654"><span class="section-number-4">2.1.8.</span> <span class="todo TODO">TODO</span> Other Characters</h4>
+<div class="outline-text-4" id="text-2-1-8">
+<p>
+Who are the other characters and what role do they play?
+</p>
+</div>
+</div>
+<div id="outline-container-orgecded59" class="outline-4">
+<h4 id="orgecded59"><span class="section-number-4">2.1.9.</span> <span class="todo TODO">TODO</span> Places</h4>
+<div class="outline-text-4" id="text-2-1-9">
+<p>
+What locations are there in the world? Not all necessarily exist as in-game locations, they can be alluded to in plot.
+</p>
+</div>
+</div>
+<div id="outline-container-org1cb14fb" class="outline-4">
+<h4 id="org1cb14fb"><span class="section-number-4">2.1.10.</span> <span class="todo TODO">TODO</span> Relationships</h4>
+<div class="outline-text-4" id="text-2-1-10">
+</div>
+<ol class="org-ol">
+<li><a id="org7e141d4"></a>of Places to Places<br /></li>
+<li><a id="org4b16a58"></a>of Characters to Characters<br /></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd221890" class="outline-2">
+<h2 id="orgd221890"><span class="section-number-2">3.</span> Realization of Narrative</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+This section describes how the narrative elements are realized using gameplay and style.
+Think of there being an actual &ldquo;Machimania&rdquo; universe - what parts of the Machimania universe exists in-game instead of in-universe? For example, the Machimania planet has a <b>lot</b> of places, but we can only choose to realize or represent certain locations.
+</p>
+</div>
+<div id="outline-container-org691571a" class="outline-4">
+<h4 id="org691571a"><span class="section-number-4">3.0.1.</span> Plot Progression</h4>
+</div>
+<div id="outline-container-org36253fc" class="outline-4">
+<h4 id="org36253fc"><span class="section-number-4">3.0.2.</span> Locations</h4>
+</div>
+<div id="outline-container-org36c4be6" class="outline-4">
+<h4 id="org36c4be6"><span class="section-number-4">3.0.3.</span> Map Design</h4>
+</div>
+<div id="outline-container-org484f1f1" class="outline-4">
+<h4 id="org484f1f1"><span class="section-number-4">3.0.4.</span> Gameplay</h4>
+<div class="outline-text-4" id="text-3-0-4">
+</div>
+<ol class="org-ol">
+<li><a id="org36aef18"></a>Modularity<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgef71c44" class="outline-4">
+<h4 id="orgef71c44"><span class="section-number-4">3.0.5.</span> Art and Music</h4>
+</div>
+</div>
+<div id="outline-container-org025fb65" class="outline-2">
+<h2 id="org025fb65"><span class="section-number-2">4.</span> Gameplay</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgadf727f" class="outline-3">
+<h3 id="orgadf727f"><span class="section-number-3">4.1.</span> Features</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org9cd6081" class="outline-4">
+<h4 id="org9cd6081"><span class="section-number-4">4.1.1.</span> <span class="todo TODO">TODO</span> Gameplay loops</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3c6322e"></a>Broader loop<br />
+<div class="outline-text-5" id="text-4-1-1-1">
+<p>
+Menu -&gt; game instance -&gt; location -&gt; battle -&gt; location -&gt; battle &#x2026;
+</p>
+</div>
+</li>
+<li><a id="org144d811"></a>Battle loop<br />
+<div class="outline-text-5" id="text-4-1-1-2">
+<p>
+**
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org007a212" class="outline-4">
+<h4 id="org007a212"><span class="section-number-4">4.1.2.</span> <span class="todo TODO">TODO</span> User interface and controls</h4>
+</div>
+<div id="outline-container-orge3e8847" class="outline-4">
+<h4 id="orge3e8847"><span class="section-number-4">4.1.3.</span> <span class="todo TODO">TODO</span> Global systems</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+Refers to the persistent, over-arching mechanics of the game.
+</p>
+
+<p>
+They give a sense of continuity or progression (i.e. stats or bestiary or personal wiki increasing over time) (quests), help with information overload (bestiary, stats, wiki, quests), add some beyond battle strategizing (time, stats in battle, stats affecting movement in map, stats affecting dialogue trees) and interacts with narrative (quests determining where to go, wiki)&#x2026;
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgae2cd0d"></a>Player-centric<br />
+<ol class="org-ol">
+<li><a id="org6af75d9"></a>Quests<br /></li>
+<li><a id="org6cbe7cb"></a>Player Stats<br /></li>
+<li><a id="orge079a0e"></a>Bestiary<br /></li>
+<li><a id="org20e0227"></a>Personal Wiki<br /></li>
+<li><a id="org0f68a19"></a>Inventory<br /></li>
+</ol>
+</li>
+<li><a id="orga77bcf8"></a>World State / Map<br />
+<ol class="org-ol">
+<li><a id="orgb98b764"></a>Time<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org666b1df" class="outline-4">
+<h4 id="org666b1df"><span class="section-number-4">4.1.4.</span> <span class="todo TODO">TODO</span> In-map interactions</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+Refers to the mechanics present when you interact with things or NPCs in the map.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org9d72090"></a>NPC interactions<br />
+<ol class="org-ol">
+<li><a id="org4487a0d"></a>Dialogue trees<br /></li>
+<li><a id="orgec65d6a"></a>Dialogue display<br /></li>
+</ol>
+</li>
+<li><a id="org1bccf1a"></a>Terrain<br /></li>
+<li><a id="org2d89ed9"></a>Obstacles<br /></li>
+<li><a id="org10cedbb"></a>Interactables<br /></li>
+<li><a id="org26f4cbf"></a>Scenery<br /></li>
+</ol>
+</div>
+<div id="outline-container-org6327a8b" class="outline-4">
+<h4 id="org6327a8b"><span class="section-number-4">4.1.5.</span> <span class="todo TODO">TODO</span> Battle system</h4>
+<div class="outline-text-4" id="text-4-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="orga23b702"></a>Turn economy<br /></li>
+<li><a id="org770c0b2"></a>Terrain<br /></li>
+<li><a id="org3382001"></a>Team composition<br /></li>
+<li><a id="org59efaf8"></a>Entities<br /></li>
+<li><a id="orga93ff68"></a>Actions in a turn<br /></li>
+<li><a id="org12af0b9"></a>Win/lose condition<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org75e6c28" class="outline-3">
+<h3 id="org75e6c28"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> Strategy and Progression</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+By strategy I mean the high level techniques or rules-of-thumb or trade-offs that allows the player to play more efficiently in response to certain enemies or maps. If choices in gameplay or dialogue affect the narrative, it also may involve strategizing about narrative choices
+</p>
+</div>
+</div>
+<div id="outline-container-orgde12a72" class="outline-3">
+<h3 id="orgde12a72"><span class="section-number-3">4.3.</span> <span class="todo TODO">TODO</span> </h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: selffins</p>
+<p class="date">Created: 2025-01-26 Sun 14:10</p>
+</div>
+</body>
+</html>
